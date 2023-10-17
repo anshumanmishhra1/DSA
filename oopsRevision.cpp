@@ -97,6 +97,10 @@ class hero{
         return level;
     }
 
+    void print(){
+        cout<<"health"<< this->health<<endl;
+        cout<<"Level "<< this->level<<endl;
+    }
 
     int getHealth(){
         return health;
@@ -106,7 +110,21 @@ class hero{
         level=ch;
     }
 
-  
+    hero(int health){ 
+        cout<<"this ->"<<this<<endl;
+        this -> health=health; 
+   }
+
+   hero(int health, char level){ 
+        this ->level=level;
+        this -> health=health; 
+   }
+    
+    // Here we are creating our own Copy Constructor: 
+    hero(hero&  temp){
+        this->health=temp.health;
+        this->level=temp.level;
+    }
 
     void setHealth(int h){
         health=h;
@@ -114,6 +132,7 @@ class hero{
 };
 
 int main(){
+    /*
     //object created statically
     // cout<<"Hii"<<endl;
     hero ramesh;
@@ -122,5 +141,33 @@ int main(){
 
     //object created dynamically
     hero *h= new hero;
+
+    /*Concept of Parameterised Constructor and this keyword
+        hero(int health){
+            this -> health=health; 
+        }
+    
+   hero ramesh(10);
+   cout<<"Address of Ramesh "<<&ramesh<<endl;
     return 0;
+
+    hero *h=new hero(11);
+    hero temp(22,'B');
+    ramesh.print();
+    // h->print;
+
+    */
+
+   /* Concept of Copy Constructor: */
+   hero S(70,'C');
+   S.print();
+
+
+   hero R(S); // it means here we are copying the constructor
+   R.print();
+    // basically we mean of the above line that is written below: 
+//    R.health=suresh.health;
+//    R.level=suresh.level;
+   
+
 }
