@@ -65,7 +65,7 @@ int main(){
 
 
 
-/* Data Hiding or Encapculation: */
+/* Data Hiding or Encapculation: 
 
 #include<iostream>
 using namespace std;
@@ -123,3 +123,5 @@ int main(){
     cout<<"Perimeter is : "<<r1.perimeter()<<endl;
     return 0 ;
 }
+
+*/
