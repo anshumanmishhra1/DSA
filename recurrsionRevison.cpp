@@ -66,5 +66,13 @@
 // }
 
 
+/* Power Functio using logarithm: */
 
+#include<iostream>
+using namespace std;
 
+int main(){
+     
+    return 0;
+
+}
