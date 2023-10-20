@@ -1,196 +1,204 @@
-// // #include<iostream>
-// // using namespace std;
+/*
+#include<iostream>
+using namespace std;
+class Rectangle{
+    public:
+    int length,breadth;
 
-// // class hero{
-// //     private:
-// //     int health;
-// //     public:
-// //     char level;
+    //function for finding Area: 
+    int area(){
+        return length*breadth;
+    }
 
-// //     //understanding setter:
-// //     int getHealth(){
-// //         return health;
-// //     }
+    //Function for finding paramenter: 
+    int perimeter(){
+        return 2*(length+breadth);
+    }
+};
+int main(){
+    Rectangle r1,r2;
+    r1.length=10;
+    r1.breadth=5;
+    cout<<"Area of Rectangle is R1 : "<<r1.area()<<endl;
+    cout<<"Perimeter of Rectangle is R1 : "<<r1.perimeter()<<endl;
 
-// //     char getLevel(){
-// //         return level;
-// //     }
+    r2.length=15;
+    r2.breadth=10;
+    cout<<"Area of Rectangle is R2 : "<<r2.area()<<endl;
+    cout<<"Perimeter of Rectangle is R2 : "<<r2.perimeter()<<endl;
 
-// //     //Understanding setter
-// //     int setHealth(int h){
-// //         health=h;
-// //     }
+    return 0;
+}
 
-// //     char setLevel(char ch){
-// //         level=ch;
-// //     }
-// // };
-
-// // int main(){
-//     // hero ramesh;
-//     // ramesh.level='A';
-//     // ramesh.setHealth(70);
-//     // cout<<"level of ramesh : "<<ramesh.level<<endl;
-//     // cout<<"halth of ramesh : "<<ramesh.getHealth();
-
-
-//     // Static vs Dynamically
-
-//     // hero a;
-//     // a.setHealth(70);
-//     // a.setLevel('A'); 
-//     // cout<<"a health is : "<<a.getHealth()<<endl;
-//     // cout<<"a level is : "<<a.level<<endl; // this static allocation
+*/
 
 
-//     // hero *b=new hero;
-//     // (*b).setHealth(80);
-//     // cout<<"New Hero health is: "<<(*b).getHealth();
-//     // b->setHealth(90);
-//     // cout<<"New Hero health is: "<<b->getHealth();
+/* Pointer to Object : 
 
+#include<iostream>
+using namespace std;
+class Rectangle{
+    public:
+    int length,breadth;
 
-// // }
+    //function for finding Area: 
+    int area(){
+        return length*breadth;
+    }
 
+    //Function for finding paramenter: 
+    int perimeter(){
+        return 2*(length+breadth);
+    }
+};
 
-// /* Copy Constructor : */
-
-// #include<iostream>
-// #include<string.h>
-
-// using namespace std;
-
-// class hero{
-//     private:
-//     int health;
-//     public:
-//     char level;
-//     char *name;
-//     static int timetoComplete;
-
-
-//     hero(){
-//         cout<<"Simple Constructor Called: "<<endl;
-//         name=new char[100];
-//     }
-
-//     hero (int health){
-//         this-> health=health;
-
-//     }
-
-//     hero(int health, char level){
-//         this-> level= level;
-//         this-> health= health;
-//     }
-
-
-//     //copy constructor :
-
-//     hero(hero& temp){
-//         // deep copy :
-
-//         char *ch = new char[strlen(temp.name)+1];
-//         strcpy(ch,temp.name);
-//         this->name=ch;
-//         cout<<"copy constructor called :"<<endl;
-//         this-> health=temp.health;
-//         this->level=temp.level;
-//     }
-//     void print(){
-//         cout<<endl;
-//         cout<<"name : "<<this->name<< " ,";
-//         cout<<"health"<<this -> health<<" ,";
-//         cout<<"level"<< this -> level<<endl;
-//     }
-//     //understanding setter:
-//     int getHealth(){
-//         return health;
-//     }
-
-//     char getLevel(){
-//         return level;
-//     }
-
-//     //Understanding setter
-//     int setHealth(int h){
-//         health=h;
-//     }
-
-//     char setLevel(char ch){
-//         level=ch;
-//     }
-
-//     static int random(){
-//         return timetoComplete;
-//     }
-
-//     void setName(char name[]){
-//         strcpy(this->name, name);
-//     }
-//     // Destructor 
-//     ~hero(){
-//         cout<< "Destructor bhai called :" << endl;
-//     }
-
-// };
-
-// int hero :: timetoComplete = 5; // used for static
-
-    
-
-// int main(){
-//     // hero suresh;
-//     // // suresh.setHealth(70);
-//     // // suresh.setLevel('c'); we can write this in another way
-
-//     // hero s(70,'A');
-//     // s.print();
-
-//     // //copy constructor called: 
-//     // hero r(s);
-//     // r.print();   
-
-
-//     // hero hero1;
-//     // hero1.setHealth(12);
-//     // hero1.setLevel('D');
-//     // char name[7]="Anshu";
-//     // hero1.setName(name);
-
-//     // hero1.print();
-
-
-//     // // Use default copy constructor:
-//     // hero hero2(hero1);
-//     // hero2.print();
-//     // //hero hero2=her01;
-
-//     // hero1.name[0]='G';
-//     // hero1.print();
-
-
-//     /* Destructor : */
-//     //static
-
-//     // hero a ;
-
-//     // // dynamic:
-//     // hero *b= new hero;
-//     // delete b;
-
-
-//     /* Static : */
-
-//     // cout<<hero :: timetoComplete<<endl;
-     
-//     cout<<hero::random()<<endl;
-
-
-//     }
-
-
-    
+int main(){
+    //here we are creating object dynamically or inother word we can say object is created in heap:
+    Rectangle *p=new Rectangle();
+    p->length=10;
+    p-> breadth=5;
+    cout<<"Area is : "<<p->area()<<endl;
+    cout<<"Perimeter is : "<<p->perimeter()<<endl;
+    return 0;
+}
+*/
 
 
 
+/* Data Hiding or Encapculation: 
+
+#include<iostream>
+using namespace std;
+class Rectangle{
+    private:
+    int length,breadth;
+
+    public: 
+    // first set the length then we will try to get the length that is set 
+    void setLength(int l){
+        if(l>=0){
+            length=l;
+        }
+        else{
+            cout<<"Length Can't be Negative Bro : "<<endl;
+        }
+    }
+
+    void setBreadth(int b){
+        if(b>=0){
+            breadth=b;
+        }
+        else{
+            cout<<"Breadth can't be Negative Bro: "<<endl;
+        }
+    }
+
+    // now above we have set the length and breadth now fetcth or get the data 
+    int getLength(){
+        return length;
+    }
+
+    int getBreadth(){
+        return breadth;
+    }
+    //function for finding Area : 
+    int area(){
+        return length*breadth;
+    }
+
+    //Function for finding paramenter: 
+    int perimeter(){
+        return 2*(length+breadth);
+    }
+};
+
+int main(){
+    Rectangle r1;
+    r1.setLength(15);
+    r1.setBreadth(10);
+    cout<<"Length is : "<<r1.getLength()<<endl;
+    cout<<"Breadth is : "<<r1.getBreadth()<<endl;
+    cout<<endl<<endl;
+    cout<<"Area is : "<<r1.area()<<endl;
+    cout<<"Perimeter is : "<<r1.perimeter()<<endl;
+    return 0 ;
+}
+
+*/
+
+
+/* Concept Of Constructor : */
+
+#include<iostream>
+using namespace std;
+class Rectangle{
+    private:
+    int length,breadth;
+
+    public:
+
+    Rectangle(){
+        cout<<"Non-Parameterised Constructor is called : "<<endl;
+    }
+
+    Rectangle(int l, int b){
+        cout<<"Paramterised Constructor is Called : "<<endl;
+        setLength(l);
+        setBreadth(b);
+    }
+
+    Rectangle(Rectangle &r){
+        length=r.length;
+        breadth=r.breadth;
+    }
+    void setLength(int l){
+        if(l>=0){
+            length=l;
+        }
+        else{
+            length=0;
+        }
+    }
+
+    void setBreadth(int b){
+        if(b>=0){
+            breadth=b;
+        }
+        else{
+            breadth=0;
+        }
+    }
+
+    int getLength(){
+        return length;
+    }
+
+    int getBreadth(){
+        return breadth;
+    }
+
+    //function for finding Area: 
+    int area(){
+        return length*breadth;
+    }
+
+    //Function for finding paramenter: 
+    int perimeter(){
+        return 2*(length+breadth);
+    }
+};
+
+int main(){
+    Rectangle r1(10,20);
+    Rectangle r2(r1);
+
+    cout<<"Length is : "<<r2.getLength()<<endl;
+    cout<<"Breadth is : "<<r2.getBreadth()<<endl;
+    cout<<endl;
+    cout<<"Area of R1 is : "<<r1.area()<<endl;
+    cout<<"Perimeter of R1 is : "<<r1.perimeter()<<endl;
+    cout<<endl;
+    cout<<"Area of R2 is "<<r2.area()<<endl;
+    cout<<"Perimeter of R2 is "<<r2.perimeter()<<endl;
+    return 0;
+}
