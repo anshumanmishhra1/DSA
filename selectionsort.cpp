@@ -55,30 +55,61 @@
 
 //lets just check whether we can sort with this logic in c or not
 
-#include<stdio.h>
+// #include<stdio.h>
+
+// int main(){
+//     int n;
+//     scanf("%d",&n);
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         scanf("%d",&arr[i]);
+//     }
+
+//     for(int i=0;i<n-1;i++){
+//         for(int j=i+1;j<n;j++){
+//             if(arr[j]<arr[i]){
+//                 int temp=arr[j];
+//                 arr[j]=arr[i];
+//                 arr[i]=temp;
+//             }
+//         }
+//     }
+
+//     for(int i=0;i<n;i++){
+//         printf("%d ",arr[i]);
+//     }
+//     return 0;
+// }
+
+// so we get to know that we can't use direct swap function in c
+
+
+
+#include<iostream>
+#include<string.h>
+using namespace std;
 
 int main(){
+    int arr[10];
     int n;
-    scanf("%d",&n);
-    int arr[n];
+    cout<<"Enter the number of elements : "<<endl;
+    cin>>n;
+
     for(int i=0;i<n;i++){
-        scanf("%d",&arr[i]);
+        cin>>arr[i];
     }
 
     for(int i=0;i<n-1;i++){
         for(int j=i+1;j<n;j++){
-            if(arr[j]<arr[i]){
-                int temp=arr[j];
-                arr[j]=arr[i];
-                arr[i]=temp;
+            if(arr[i]>arr[j]){
+                swap(arr[i],arr[j]);
             }
         }
     }
 
     for(int i=0;i<n;i++){
-        printf("%d ",arr[i]);
+        cout<<arr[i]<<" ";
     }
     return 0;
-}
 
-// so we get to know that we can't use direct swap function in c
+}

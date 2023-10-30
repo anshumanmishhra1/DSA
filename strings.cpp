@@ -208,8 +208,12 @@ int main(){
 
 /* 💻 Now start Practicing questions */
 
-/* Question 1: given a string str, sort the given string
-input : codingwallah
-output : aacdghillnow */
+/* Question 1: given two string s and t, return true if t is an anagram of
+s, and false otherwise
+input: s='anagram' , t='nagaram'
+output : yes
+
+input 2: s="bank" , t="atm"
+output : no*/
 
 
