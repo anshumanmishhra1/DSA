@@ -597,4 +597,3 @@ int main(){
 
 
 /*📌 Array And Pointer */
-
