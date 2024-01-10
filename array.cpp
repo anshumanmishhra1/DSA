@@ -384,36 +384,37 @@ of array into another in reverse order*/
 // }
 
 
-/* Question : Intersection of two arrays : */
+/* Question : Intersection of two arrays : 
+#include<iostream>
+using namespace std;
 
-// #include<iostream>
-// using namespace std;
+int main(){
+       int m,n;
+       cin>>m>>n;
+       int arr1[m];
+       int arr2[n];
+       for(int i=0;i<m;i++){
+              cin>>arr1[i];
+       }
+       int ans;
+       for(int i=0;i<n;i++){
+              cin>>arr2[i];
+       }
 
-// int main(){
-//        int m,n;
-//        cin>>m>>n;
-//        int arr1[m];
-//        int arr2[n];
-//        for(int i=0;i<m;i++){
-//               cin>>arr1[i];
-//        }
-//        int ans;
-//        for(int i=0;i<n;i++){
-//               cin>>arr2[i];
-//        }
+       for(int i=0;i<m;i++){
+              for(int j=0;j<n;j++){
+                     if(arr1[i]==arr2[j]){
+                            ans=arr1[i];
+                            cout<<arr1[i]<<" ";
+                            break;
+                     }
+              }
+       }
+       return 0;
 
-//        for(int i=0;i<m;i++){
-//               for(int j=0;j<n;j++){
-//                      if(arr1[i]==arr2[j]){
-//                             ans=arr1[i];
-//                             cout<<arr1[i]<<" ";
-//                             break;
-//                      }
-//               }
-//        }
-//        return 0;
+}
 
-// }
+*/
 
 
 /* Merge sorted Array : */
@@ -459,26 +460,141 @@ of array into another in reverse order*/
 
 /* Question :- character occurence in Array: */
 
-#include <iostream>
-#include <string>
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int count(string s, char c)
+// {
+// 	int res = 0;
+
+// 	for (int i=0;i<s.length();i++)
+
+// 		if (s[i] == c)
+// 			res++;
+
+// 	return res;
+// }
+
+// int main()
+// {
+// 	string str= "anshuman";
+// 	char c = 'n';
+// 	cout << count(str, c) << endl;
+// 	return 0;
+// }
+
+
+/* print the roll no whose marks is less than 35
+
+#include<iostream>
+#include<set>
 using namespace std;
 
-int count(string s, char c)
-{
-	int res = 0;
+int main(){
+       int arr[7];
+       for(int i=0;i<7;i++){
+              cin>>arr[i];
+       }
 
-	for (int i=0;i<s.length();i++)
+       for(int i=0;i<7;i++){
+              if(arr[i]<35){
+                     cout<<i<<" "<<arr[i];
+              }
+       }
+       return 0;
 
-		if (s[i] == c)
-			res++;
-
-	return res;
 }
 
-int main()
-{
-	string str= "anshuman";
-	char c = 'n';
-	cout << count(str, c) << endl;
-	return 0;
+*/
+
+/* HOw to find the size of the array
+#include<iostream>
+#include<set>
+using namespace std;
+
+int main(){
+       int arr[]={1,2,3,4,5,6,7,8,1,9,10};
+
+       int n= sizeof(arr)/sizeof(arr[0]);
+       cout<<n;
+       return 0;
+
 }
+
+ 
+*/
+
+
+/* FInd the second larget element in the array
+
+
+#include<iostream>
+#include<climits>
+using namespace std;
+
+int main(){
+       int n;
+       cin>>n;
+       int arr[n];
+       for(int i=0;i<n;i++){
+              cin>>arr[i];
+       }
+
+       int max = INT_MIN;
+       int smax = INT_MIN;
+
+       for(int i=0;i<n;i++){
+              if(arr[i]>max){
+                     max=arr[i]; 
+              }
+       }
+
+       for(int i=0;i<n;i++){
+              if(arr[i]!= max && smax<arr[i]){
+                     smax=arr[i];
+              }
+       }
+
+       cout<<smax;
+       return 0;
+
+}
+
+ */
+
+
+
+/* 📌 Passing Array to Function */
+
+/* Understanding the function with array 
+#include<iostream>
+using namespace std;
+void display(int a[]){
+       for(int i=0;i<5;i++){
+              cout<<a[i]<<" ";
+       }
+       cout<<endl;
+       return;
+}
+
+void change (int b[]){
+       b[0]=100;
+}
+int main(){
+       int arr[5]={1,4,2,7,4};
+       //accessing the elements of array in another function
+       //updation, pass by value or by reference ?
+
+       display(arr);
+       change(arr);
+       display(arr);
+       return 0;
+
+}
+
+*/
+
+
+/*📌 Array And Pointer */
+

@@ -208,12 +208,23 @@ int main(){
 
 /* 💻 Now start Practicing questions */
 
-/* Question 1: given two string s and t, return true if t is an anagram of
-s, and false otherwise
-input: s='anagram' , t='nagaram'
-output : yes
+#include<iostream>
+#include<string.h>
+using namespace std;
+void sort(string str){
+    //finding index of a
+    int sort[26];
+    int num=97;
+    for(int i=0;i<26;i++){
+        sort[friend]
+    }
+}
+int main(){
+    string str;
+    cin>>str;
 
-input 2: s="bank" , t="atm"
-output : no*/
+    sort(str);
+    
+    return 0;
 
-
+}
