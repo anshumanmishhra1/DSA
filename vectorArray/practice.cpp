@@ -209,7 +209,7 @@ int main(){
 /*📌 Rotate the given array 'a' by k steps where k is non-negaitve
 . 
 Note : K can be greater than n as well where n is the size of array 'a'
-
+*/
 
 #include<iostream>
 #include<vector>
@@ -260,4 +260,3 @@ int main(){
 
 }
 
-*/

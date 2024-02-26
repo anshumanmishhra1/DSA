@@ -16,7 +16,7 @@
 // }
 
 
-/*📍When size of vector is not given 
+/*📍When size of vector is not given */
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -37,4 +37,3 @@ int main(){
 
 }
 
-*/

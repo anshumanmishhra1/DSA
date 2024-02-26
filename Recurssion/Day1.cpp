@@ -105,9 +105,11 @@ int power(int a, int b){
     return a*power(a,b-1);
 }
 int main(){
-    int a,b;
-    cin>>a>>b;
-    cout<<power(a,b);
+    // int a,b;
+    // cin>>a>>b;
+    int a=2,b=3;
+    int res = power(a,b);
+    cout<<res;
     return 0;
 
 }
