@@ -41,18 +41,12 @@ int main(){
 */
 
 
-/*📌Find the number of set bits for any integer n
-
-*/
-
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <bitset>
 using namespace std;
-int count_set_bits(int num){
-    return __builtin_popcount(num);
-}
-int main(){
-    cout<<count_set_bits(13)<<endl; 
-    return 0;
 
+int main() {
+    bitset<4> b("1010");
+    cout << (b >> 1) << endl;
+    return 0;
 }

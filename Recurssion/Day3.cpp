@@ -100,7 +100,7 @@ int main(){
 */
 
 
-/*📌Subset Of A String : *
+/*📌Subset Of A String : */
 
 #include<iostream>
 #include<vector>
@@ -123,7 +123,7 @@ int main(){
 
 }
 
-*/
+
 
 
 /*📌Increasing Subsequences of an Array 
@@ -158,5 +158,4 @@ int main(){
     return 0;
 
 }
-
 */
